@@ -1,31 +1,46 @@
-const inquirer = require ('inquierer')
-const fs = require ('fs')
-
+const inquirer = require("inquirer");
+const fs = require("fs");
+const shapes = require (`./shapes`)
 inquirer
-    .prompt ([
+    .prompt([
         {
-            type:'maxlength-input',
-            name:'text',
-            message:'What letters do you want?(max of 3)',
+            type: 'maxlength-input',
+            name: 'text',
+            message: 'What letters do you want?(max of 3)',
             maxLength: 3,
 
         },
         {
-            type:'input',
-            name:'fontColor',
-            message:'what is the hexidecimal code for the text color you want?',
+            type: 'input',
+            name: 'fontColor',
+            message: 'what is the hexidecimal code for the text color you want?',
         },
 
         {
-            type:'list',
-            name:'shape',
-            message:'what shape do you want?',
-            choices:['square', 'circle', 'triangle']
+            type: 'list',
+            name: 'shape',
+            message: 'what shape do you want?',
+            choices: ['square', 'circle', 'triangle']
         },
         {
-            type:'input',
-            name:'shapeColor',
-            message:'what color do you want your shape to be?',
+            type: 'input',
+            name: 'shapeColor',
+            message: 'what color do you want your shape to be?',
         }
 
-    ]
+    ]).then((answers) => { })
+
+function shape() {
+    if (answers.shape = square) {
+        render(lib.shapes.square)
+    }
+} else if (answers.shape = circle) {
+    render(./shapes.shapes.circle)
+} else if  {
+     (answers.shape = triangle)
+        render(lib.shapes.triangle)
+};
+
+shape();    
+
+    }
