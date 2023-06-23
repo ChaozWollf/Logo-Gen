@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const shapes = require (`./shapes`)
+const jest = require ("jest")
 inquirer
     .prompt([
         {
@@ -28,19 +29,17 @@ inquirer
             message: 'what color do you want your shape to be?',
         }
 
-    ]).then((answers) => { })
+    ]).then((answers) => { 
 
 function shape() {
     if (answers.shape = square) {
         render(lib.shapes.square)
-    }
-} else if (answers.shape = circle) {
-    render(./shapes.shapes.circle)
-} else if  {
-     (answers.shape = triangle)
+    
+} else if ((answers.shape = circle)) {
+    render(lib.shapes.shapes.circle)
+} else if (answers.shape = triangle) {
         render(lib.shapes.triangle)
 };
-
-shape();    
-
-    }
+};    
+return shape()    
+});

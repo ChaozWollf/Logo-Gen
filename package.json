@@ -1,5 +1,13 @@
 {
-  "dependencies": {
-    "inquirer": "^9.2.7"
-  }
+ "name": "Logo-Gen",
+ "version": "1.0.0",
+ "main": "index.js",
+ "scripts": { 
+  "tests": "jest"
+}, 
+ "dependencies": {
+    "inquirer": "^9.2.7",
+  "devDependencies":{
+    "jest": "^24.9.0"}
+   }
 }
