@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const shapes = require (`./shapes`)
-const jest = require ("jest")
+const shapes = require(`./shapes`)
+const jest = require("jest");
+const { receiveMessageOnPort } = require("worker_threads");
 inquirer
     .prompt([
         {
@@ -13,13 +14,13 @@ inquirer
         },
         {
             type: 'input',
-            name: 'fontColor',
-            message: 'what is the hexidecimal code for the text color you want?',
+            name: 'textColor',
+            message: 'what is color for the text color you want?',
         },
 
         {
             type: 'list',
-            name: 'shape',
+            name: 'shapeType',
             message: 'what shape do you want?',
             choices: ['square', 'circle', 'triangle']
         },
@@ -29,22 +30,38 @@ inquirer
             message: 'what color do you want your shape to be?',
         }
 
-    ]).then((answers) => { 
-
-function shape() {
-    if (answers.shape = square) {
-        render(lib.shapes.square)
+    ]).then((text, textColor, shapeType, shapeColor) => {
+        if (shapeType === "circle") {
+            shape = new Circle
+        };
+    else if { shapeType === "triangle"}{
+        shape = new polygon
+    };
+        else if (shapeType === "square") {
+    shape = new rec
+    };
     
-} else if ((answers.shape = circle)) {
-    render(lib.shapes.shapes.circle)
-} else if (answers.shape = triangle) {
-        render(lib.shapes.triangle)
-};
-};    
-return shape()   
 
-function shapeColors
+
+shape.setColor(shapeColor)
+shape.setText(text, textColor)
+
+// class shape() {
+//     constructor(shape, shapeColor)
+//         (answers.shape = square) {
+//         render(lib.shapes.square)
+
+//     } else if ((answers.shape = circle)) {
+//         render(lib.shapes.shapes.circle)
+//     } else if (answers.shape = triangle) {
+//         render(lib.shapes.triangle)
+//     };
+// };
+// return shape()
+
+class shapeColors
 
 
 });
 
+class 
