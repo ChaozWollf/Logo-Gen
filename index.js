@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const shapes = require(`./shapes`)
 const jest = require("jest");
-const { receiveMessageOnPort } = require("worker_threads");
+// const { receiveMessageOnPort } = require("worker_threads");
 inquirer
     .prompt([
         {
@@ -31,37 +31,37 @@ inquirer
         }
 
     ]).then((text, textColor, shapeType, shapeColor) => {
+        let shape;
         if (shapeType === "circle") {
-            shape = new Circle
+            shape = new Circle()
+        }
+        else if (shapeType === "triangle") {
+            shape = new polygon();
+        } else if (shapeType === "square") {
+            shape = new rec();
         };
-    else if { shapeType === "triangle"}{
-        shape = new polygon
-    };
-        else if (shapeType === "square") {
-    shape = new rec
-    };
+
     
 
+        shape.setColor(shapeColor)
+        shape.setText(text, textColor)
+    });
+        // class shape() {
+        //     constructor(shape, shapeColor)
+        //         (answers.shape = square) {
+        //         render(lib.shapes.square)
 
-shape.setColor(shapeColor)
-shape.setText(text, textColor)
+        //     } else if ((answers.shape = circle)) {
+        //         render(lib.shapes.shapes.circle)
+        //     } else if (answers.shape = triangle) {
+        //         render(lib.shapes.triangle)
+        //     };
+        // };
+        // return shape()
 
-// class shape() {
-//     constructor(shape, shapeColor)
-//         (answers.shape = square) {
-//         render(lib.shapes.square)
-
-//     } else if ((answers.shape = circle)) {
-//         render(lib.shapes.shapes.circle)
-//     } else if (answers.shape = triangle) {
-//         render(lib.shapes.triangle)
-//     };
-// };
-// return shape()
-
-class shapeColors
+        // class shapeColors
 
 
-});
+// });
 
-class 
+// class 
