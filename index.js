@@ -31,7 +31,7 @@ inquirer
         }
 
     ]).then((text, textColor, shapeType, shapeColor) => {
-        let shape;
+        class Shape() {
         if (shapeType === "circle") {
             shape = new Circle()
         }
@@ -40,7 +40,7 @@ inquirer
         } else if (shapeType === "square") {
             shape = new rec();
         };
-
+    }
     
 
         shape.setColor(shapeColor)
