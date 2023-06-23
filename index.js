@@ -41,5 +41,10 @@ function shape() {
         render(lib.shapes.triangle)
 };
 };    
-return shape()    
+return shape()   
+
+function shapeColors
+
+
 });
+
