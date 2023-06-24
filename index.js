@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const shapes = require(`./shapes`)
 const jest = require("jest");
-const [Circle, Triangle, Square] = require(`./shapes`)
+const {Circle, Triangle, Square} = require(`./shapes`)
 // const { receiveMessageOnPort } = require("worker_threads");
 inquirer
     .prompt([
@@ -33,12 +33,12 @@ inquirer
 
     ]).then((text, textColor, shapeType, shapeColor) => {
         switch (shapeType) {
-         case "circle":
+         case "Circle":
             shape = new Circle();
-        case "triangle": 
-            shape = new Polygon();
-        case "square": 
-            shape = new rec();
+        case "Triangle": 
+            shape = new Triangle();
+        case "Square": 
+            shape = new Square();
         break;
         default: 
         console.log("sorry, error occured")
@@ -48,7 +48,13 @@ inquirer
         shape.setColor(shapeColor)
         shape.setText(text, textColor)
     });
-        // class shape() {
+        
+    
+    
+    
+    
+    
+    // class shape() {
         //     constructor(shape, shapeColor)
         //         (answers.shape = square) {
         //         render(lib.shapes.square)
