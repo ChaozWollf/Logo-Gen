@@ -3,6 +3,7 @@ const fs = require('fs');
 const shape = require('./lib/shapes')
 const jest = require('jest');
 const {Circle, Triangle, Square} = require(`./lib/shapes`)
+
 // const { receiveMessageOnPort } = require("worker_threads");
 inquirer
     .prompt([
@@ -31,13 +32,14 @@ inquirer
             message: 'what color do you want your shape to be?',
         }
 
-    ]).then((text, textColor, shapeType, shapeColor) => {
-        switch (shapeType) {
-         case "Circle":
+    ]).then(({text, textColor, shapeType, shapeColor}) => {
+        let shape = ''
+        switch(shapeType) {
+         case "circle":
             shape = new Circle();
-        case "Triangle": 
+        case "triangle": 
             shape = new Triangle();
-        case "Square": 
+        case "square": 
             shape = new Square();
         break;
         default: 
