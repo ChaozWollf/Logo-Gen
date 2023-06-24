@@ -47,7 +47,7 @@ inquirer
 
         shape.setColor(shapeColor)
         shape.setText(text, textColor)
-    });
+    
         
     fs.writeFile(`logo.svg`, shape, (error) => {
         if (error) {
@@ -56,7 +56,7 @@ inquirer
                 console.log("Generated logo.svg")
             }
         });
-    
+    });
     
     
     
