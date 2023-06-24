@@ -1,7 +1,7 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
+const inquirer = require('inquirer');
+const fs = require('fs');
 const shapes = require(`./shapes`)
-const jest = require("jest");
+const jest = require('jest');
 const {Circle, Triangle, Square} = require(`./shapes`)
 // const { receiveMessageOnPort } = require("worker_threads");
 inquirer
@@ -49,7 +49,13 @@ inquirer
         shape.setText(text, textColor)
     });
         
-    fs.writeFile()
+    fs.writeFile(logo.svg, shape, (error) => {
+        if (error) {
+            console.error}
+            else {
+                console.log("Generated logo.svg")
+            }
+        });
     
     
     
