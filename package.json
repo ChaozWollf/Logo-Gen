@@ -2,14 +2,13 @@
  "name": "logo-gen",
  "version": "1.0.0",
  "main": "index.js",
- "scripts": { 
+ "scripts": {
   "tests": "jest"
-}, 
- "dependencies": {
-    "inquirer": "^9.2.7"
  },
-    "devDependencies":{
-    "jest": "^24.9.0"
-  }
+ "dependencies": {
+  "inquirer": "^8.2.4"
+ },
+ "devDependencies": {
+  "jest": "^24.9.0"
+ }
 }
-

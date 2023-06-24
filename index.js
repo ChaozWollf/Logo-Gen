@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const shapes = require(`./shapes`)
+const shapes = require(`./lib/shapes`)
 const jest = require('jest');
 const {Circle, Triangle, Square} = require(`./shapes`)
 // const { receiveMessageOnPort } = require("worker_threads");
