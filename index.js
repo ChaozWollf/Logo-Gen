@@ -37,8 +37,10 @@ inquirer
         switch(shapeType) {
          case "circle":
             shape = new Circle();
+            break;
         case "triangle": 
             shape = new Triangle();
+            break;
         case "square": 
             shape = new Square();
         break;
@@ -51,7 +53,7 @@ inquirer
         shape.setText(text, textColor)
     
         
-    fs.writeFile(`logo.svg`, shape, (error) => {
+    fs.writeFile(`logo.svg`, genSvg(shape), (error) => {
         if (error) {
             console.error}
             else {
@@ -60,6 +62,12 @@ inquirer
         });
     });
     
+    function genSvg(shape) {
+        return `
+        <rect x="10" y="10" width="30" height="30" stroke=\"transparent\" fill="${shape.color}"\ stroke-width=\"5\" />
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${shape.color}" />${shape.text}</text>
+        `
+    }
     
     
     // class shape() {
