@@ -64,9 +64,12 @@ inquirer
     
     function genSvg(shape) {
         return`
-        <rect x="10" y="10" width="30" height="30" stroke=\"transparent\" fill="${shape.color}"\ stroke-width=\"5\" />
+      <svg width="100" height="100">
+        ${shape.render()}
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="${shape.textColor}" />${shape.text}</text>
+        </svg>
         `
+    
     }
     
     
