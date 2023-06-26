@@ -63,9 +63,9 @@ inquirer
     });
     
     function genSvg(shape) {
-        return `
+        return`
         <rect x="10" y="10" width="30" height="30" stroke=\"transparent\" fill="${shape.color}"\ stroke-width=\"5\" />
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${shape.color}" />${shape.text}</text>
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${shape.textColor}" />${shape.text}</text>
         `
     }
     
