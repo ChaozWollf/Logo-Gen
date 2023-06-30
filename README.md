@@ -22,3 +22,8 @@ I coded this logo generator to make logos so I didnt have to pay a graphic desig
 
  ## tests
   shape test using the 'npm run tests' command
+
+Video:  [label](<video/Untitled_ Jun 30, 2023 9_53 AM.mov>)
+
+
+  github repo : https://github.com/ChaozWollf/Logo-Gen
