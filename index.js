@@ -4,7 +4,7 @@ const shape = require('./lib/shapes')
 const jest = require('jest');
 const {Circle, Triangle, Square} = require(`./lib/shapes`)
 
-// const { receiveMessageOnPort } = require("worker_threads");
+//inquirer questions
 inquirer
     .prompt([
         {
@@ -31,7 +31,7 @@ inquirer
             name: 'shapeColor',
             message: 'what color do you want your shape to be?',
         }
-
+//how it takes the reponses and puts the shapes into new incidences of the models
     ]).then(({text, textColor, shapeType, shapeColor}) => {
         let shape = ''
         switch(shapeType) {
@@ -48,11 +48,11 @@ inquirer
         console.log("sorry, error occured")
         };
     
-
+//uses the information provided to set the color of the shape object listed in the .then above 
         shape.setColor(shapeColor)
         shape.setText(text, textColor)
     
-        
+        //makes the logo.svg file
     fs.writeFile(`logo.svg`, genSvg(shape), (error) => {
         if (error) {
             console.error}
@@ -74,23 +74,4 @@ inquirer
     
     }
     
-    
-    // class shape() {
-        //     constructor(shape, shapeColor)
-        //         (answers.shape = square) {
-        //         render(lib.shapes.square)
-
-        //     } else if ((answers.shape = circle)) {
-        //         render(lib.shapes.shapes.circle)
-        //     } else if (answers.shape = triangle) {
-        //         render(lib.shapes.triangle)
-        //     };
-        // };
-        // return shape()
-
-        // class shapeColors
-
-
-// });
-
-// class 
+  
